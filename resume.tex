@@ -16,7 +16,6 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -50,7 +49,6 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
@@ -75,7 +73,7 @@ Detailed achievements:%
   \item Contributed to the disaster recovery plan and co-authored the exit plan.
 \end{itemize}  
 \end{itemize}}
-\cventry{2008}{Research \& Development Intern.}{Smart Signs Solutions}{The Netherlands}{}{Worked part-time a few months to finance a study trip to Japan.\newline{}
+\cventry{2008}{Research \& Development Intern}{Smart Signs Solutions}{The Netherlands}{}{Worked part-time a few months to finance a study trip to Japan.\newline{}
 Detailed achievements:%
 \begin{itemize}
 \item Development of guest detection functionality using RFID in a smart wayfinding
@@ -93,49 +91,56 @@ Wrote documentation for the first-line of support team}
 
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2009}{Foundation Certificate in Software Testing (ISTQB)}{Information Systems Examinations Board (ISEB)}{}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2008}{M.Sc. in Telematics}{University of Twente}{Enschede, The Netherlands}{}{Thesis in ``Dynamic Service Composition in an Innovative Communication Environment''.\newline{}
+``Bonsai'' Study Tour to Japan in February 2008, topic ``Smart Surroundings''.}
+\cventry{2008}{Telecommunications Engineering}{Universidad Carlos III de Madrid}{Madrid, Spain}{}{Majored in ``Planning and
+Management of Telecommunications'', including management courses not specific to telecommunications, such as business administration, human resources, quality management and innovation.
+\newline{}Socrates/Erasmus student exchange program at the University of Twente from September 2003 to March 2004.}
 
-\section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
-
+%\section{Master thesis}
+%\cvitem{title}{\emph{Dynamic Service Composition in an Innovative Communication Environment'' (EU FP6 SPICE)}}
+%\cvitem{supervisors}{L.~Ferreira Pires, M.~van Sinderen, E.M.~Gon\c{c}alves da Silva}
+%\cvitem{description}{Dynamic Service Composition enables the creation and delivery of new customised and attentive services to the end-user upon a service request, at run-time. These new services are made by composing already existing ones.}
 
 
 \section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{Proficient}{}
+\cvitemwithcomment{Dutch}{Medium}{}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+%\section{Computer skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{Basketball}{Played at the University and at a regional league in the Netherlands.}
+\cvitem{Free software}{Linux user, I contribute by reporting bugs, participating in mailing lists, etc.}
+\cvitem{Travelling}{Visited many countries, mostly within Europe.}
+\cvitem{Photography}{Point-and-shoot, looking forward to buy a DSLR.}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3}
+\section{Awards}
+\cvlistitem{Alcatel-Lucent's ``A Night Out'' for the outstanding effort in the Belgian mobile operator project.}
+\cvlistitem{Erasmus Student Network Alumnus (Honorary life-time membership) for my contribution during a period of three years in two local sections. Participated and sometimes organized national and international events (workshops, meetings, etc.). Served as Vice-National Representative for Spain.}
 
-\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+\section{Additional information}
+\cvlistitem{LinkedIn profile available at \url{http://uk.linkedin.com/in/jorgeml}}
+\cvlistitem{Latest version of this résumé available at \url{https://github.com/jorgeml/resume/raw/master/resume.pdf}}
 
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{}
+%\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
@@ -149,26 +154,36 @@ Wrote documentation for the first-line of support team}
 \clearpage
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}     % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
+% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+% \date{\today}
+% \opening{Dear Sir or Madam,}
+% \closing{Yours faithfully,}
+% \enclosure[Attached]{curriculum vit\ae{}}     % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+% \makelettertitle
+% I am applying for the XXXXXXXX opportunity at XXXXXXXX as advertised on XXXXXXXX. This position may fit very well with my education, experience and career interests and I am confident that I can perform the job effectively. 
+%
+% I am a Telecommunications professional with more than three years of work experience. In my previous role I worked as System Integration Lead (Technical Project Manager and Presales support) for the solution integration team for a Dutch telecommunications operator, leading projects that introduced new services in a complex VoIP (IMS) telecommunications network. Previously I worked as a project consultant in managed services for a mobile operator in Belgium. My activities included participating in the design and implementation of ITIL processes, taking the responsibility of delivering operational reports to the customer (including KPIs), supporting to the integration projects and, during the last months in the project, I was solely responsible of the communication with the Operations Support tooling service provider.
+% 
+% I have excellent communication skills and I am used to deal with a variety of people on different levels (team, peers, customers, suppliers and all levels of management). My mother tongue is Spanish, I am fluent in English and I have a good level of Dutch.
+% I am certified in software testing (ISTQB Foundation level).
+% I enjoy sharing my knowledge with others and I am always looking forward to learning new things.
+% 
+% Through my work experience, I have developed some key strengths for success in this role including:
+% \begin{itemize}
+% \item Passion for technology.
+% \item Teamwork, willingness to help and be helped.
+% \item Inter-cultural skills gained living abroad and being member of an international student organization.
+% \item Strong customer focus developed in a high-demanding managed services project.
+% \end{itemize}
+%  
+% My résumé provides additional information on my education and experience. 
+% 
+% I would appreciate the opportunity to discuss my background and qualifications with you in further detail.
+% 
+% Thank you for your time and consideration. I look forward to hearing from you soon.
+% 
+% \makeletterclosing
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-\makeletterclosing
-
-%\clearpage\end{CJK*}                         % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
