@@ -5,6 +5,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
+    paths: ['**.tex']
   pull_request:
     branches: [ main ]
 
@@ -27,3 +28,10 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
+
+      - name: Commit results
+        run: |
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git commit resume.pdf -m 'Re-build PDF file' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
