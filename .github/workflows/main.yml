@@ -28,10 +28,11 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
+          latexmk_use_xelatex: true
 
       - name: Commit results
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git commit resume.pdf -m "${{ env.CI_COMMIT_MESSAGE }}" || echo "No changes to commit"
-          git push gh-pages || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
