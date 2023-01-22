@@ -29,6 +29,9 @@ jobs:
         with:
           root_file: resume.tex
           latexmk_use_xelatex: true
+              extra_fonts: |
+                ./fonts/Merriweather_Sans/*.ttf
+                ./fonts/Source_Code_Pro/*.ttf
 
       - name: Commit results
         run: |
