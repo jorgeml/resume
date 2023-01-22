@@ -1,6 +1,7 @@
 %% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%% Copyright 2013-2016 Jorge Martinez Lopez (jorgeml@jorgeml.me.uk).
+%% Copyright 2013-2022 Jorge Martinez Lopez (jorgeml@jorgeml.me).
+% !TEX program = xelatex
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
@@ -11,12 +12,18 @@
 
 % moderncv themes
 \moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
-% character encoding
-\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=british]{english}
+\usepackage[useregional]{datetime2}
+\usepackage{microtype}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Merriweather Sans Light} 
+\setsansfont{Merriweather Sans Light}
+\setmonofont{Source Code Pro}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -31,7 +38,7 @@
 %\phone[mobile]{+44~7414861067}
 %\phone[fixed]{+44~2035989989}
 \email{jorgeml@jorgeml.me}
-%\homepage{about.me/jorgeml}
+%\homepage{jorgeml.me}
 \social[linkedin]{jorgeml}
 %\social[twitter]{jorgeml}
 \social[github]{jorgeml}
@@ -57,34 +64,43 @@
 
 \section{Experience}
 \subsection{Professional Experience}
-\cventry{2013--Now}{High Touch Operations Manager}{Cisco Systems}{United Kingdom}{}{
-\begin{itemize}
-\item Delivered premium high-touch technical support services to multiple platforms for a strategic global service provider.
-Being familiar with the customer network, organization and support history, acted as the main point of contact between the Cisco organization and the customer to ensure timely resolution of critical incidents.
-\item Carried out reporting, case reviews, SLA calculations, trending analysis, and QBRs.
-\item Lead service improvement initiatives that resulted in significant cost savings for the customer and a higher quality service delivery.
-\item Became a trusted advisor for customers and colleagues globally by sharing best practices.
-\item Promoted to team lead after two years in the job.
-\end{itemize}
-}
-\cventry{2009--2012}{Technical Project Manager}{Alcatel-Lucent}{the Netherlands}{}{Consultant in the Global Customer Delivery team in the Benelux.
-\begin{itemize}
-\item System Integrator Lead for three large projects in the IMS Solution Integration Office for a large Dutch wire-line operator:
+
+\cventry{2019--present}{Customer Program Manager / Service Delivery Manager}{Cisco}{United Kingdom}{}{
   \begin{itemize}
-  \item Supervised a Technical Project Manager in each project, overseeing schedules and resource planning on all three projects, and liaising with the other leads.
-  \item Led pre-sales support by providing requirements definition and commercial offers for the three projects. Offer definition included in-house hardware and services plus third party resources.
-  \item Responsible for vendor management within each project, including compliance, offer management and regular project activities.
-  \item Mentoring activities and on the job training for two new hires for almost six months.
+    \item Support the collaboration and data centre technology platforms of a large global financial institution.
+    \item Work with the Solutions Architects, customer success, account team, and the customer on creating and updating strategic technology roadmaps, sales account plan, and customer success plan.
+    \item Coordinate the delivery of the strategy, design, lifecycle, release management, and testing management contractual deliverables.
+    \item Advise the customer on the best engagement model to achieve their desired outcomes.
+    \item Make staffing recommendations to delivery teams. Coach engineers and support their career development.
+    \item Lead Monthly Platform Service Reviews, contribute and present in QBRs.
   \end{itemize}
-\item Tool specialist consultant in a managed services project for a Belgian 2G/3G mobile operator:
-\begin{itemize}
-  \item Responsible for the Operations Support Systems (OSS) tooling (BMC Remedy ticketing, Netcool alarms) for both incident management and new requests to the service provider.
-  \item Involved in ITIL-based Operations and Rollout processes design, implementation and improvement.
-  \item Supported integration activities providing input to the project team regarding tools and processes.
-  \item Responsible of the delivery and agreement with the customer of 100+ operational reports (including KPIs).
-  \item Contributed to the disaster recovery plan and co-authored the exit plan.
-\end{itemize}
-\end{itemize}}
+}
+
+\cventry{2013--2018}{High Touch Operations Manager}{Cisco}{United Kingdom}{}{
+  \begin{itemize}
+    \item Delivered premium high-touch technical support services to multiple platforms for a strategic global service provider, ensuring timely resolution of critical incidents.
+    \item Led service improvement initiatives that resulted in hundreds of thousands of dollars in cost savings for both the customer and Cisco, and a higher quality service delivery.
+    %\item Became a trusted advisor for customers and colleagues globally by sharing best practices.
+    \item Promoted to team lead after two years in the job.
+  \end{itemize}
+}
+
+\cventry{2009--2012}{Technical Project Manager}{Alcatel-Lucent}{the Netherlands}{}{Consultant in the Global Customer Delivery team in the Benelux.
+  \begin{itemize}
+    \item System Integrator Lead / Technical Project Manager for three large projects in the IMS Solution Integration Office for a large Dutch service provider. Led pre-sales support by providing requirements definition and commercial offers.
+          %\begin{itemize} 
+            %\item Responsible for vendor management within each project, including compliance, offer management and regular project activities.
+            %\item Mentoring activities and on the job training for two new hires for almost six months.
+          %\end{itemize}
+    \item ITIL Processes and OSS Tool specialist consultant in a managed services project for a Belgian mobile operator.
+          %\begin{itemize}
+          %  \item Responsible for the Operations Support Systems (OSS) tooling (BMC Remedy ticketing, Netcool alarms) for both incident management and new requests to the service provider.
+          %  \item Involved in ITIL-based Operations and Rollout processes design, implementation and improvement.
+          %  \item Supported integration activities providing input to the project team regarding tools and processes.
+          %  \item Responsible of the delivery and agreement with the customer of 100+ operational reports (including KPIs).
+          %  \item Contributed to the disaster recovery plan and co-authored the exit plan.
+          %\end{itemize}
+  \end{itemize}}
 %\cventry{2008}{Research \& Development Intern}{Smart Signs Solutions}{the Netherlands}{}{Worked part-time a few months to finance a study trip to Japan.
 %\begin{itemize}
 %\item Development of guest detection functionality using RFID in a smart wayfinding
@@ -101,15 +117,17 @@ Being familiar with the customer network, organization and support history, acte
 %\cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
 \subsection{Volunteer Experience}
-\cventry{2004--2007}{Various roles}{Erasmus Student Network}{}{}
+\cventry{2020--present}{Event Volunteer and Photographer}{Lewisham Family Cycling Library}{}{}{Showcase cargo e-bike to local families as an alternative to a car.}
+\cventry{2019--present}{Active Travel Campaigner}{London Cycling Campaign}{Lewisham Cyclists}{}{Engage with local politicians and developers to improve walking and cycling infrastructure.}
+\cventry{2004--2007}{Various local and international roles, including Spain's VP}{Erasmus Student Network}{}{}{Advised universities on international exchange programmes and represented the Spanish network at international events (including at the EU parliament).}
 {
-%\begin{itemize}
-%\item Joined ESN Carlos III (Madrid, Spain) and afterwards ESN Twente (Enschede, the Netherlands) during my studies.
-%\item Organized local, national and international events and activities.
-%\item Mentored incoming international students.
-%\item Promoted the Socrates/Erasmus internship by providing information and advice to prospective students.
-%\item Collaborated with university management.
-%\end{itemize}
+  %\begin{itemize}
+  %\item Joined ESN Carlos III (Madrid, Spain) and afterwards ESN Twente (Enschede, the Netherlands) during my studies.
+  %\item Organized local, national and international events and activities.
+  %\item Mentored incoming international students.
+  %\item Promoted the Socrates/Erasmus internship by providing information and advice to prospective students.
+  %\item Collaborated with university management.
+  %\end{itemize}
 }
 %\cventry{2006--2007}{WebTeam Member}{Erasmus Student Network}{}{}
 %{
@@ -132,8 +150,11 @@ Being familiar with the customer network, organization and support history, acte
 %\cventry{2013}{Gamification}{University of Pennsylvania}{Coursera}{}{}
 %\cventry{2013}{Think Again: How to Reason and Argue}{Duke University}{Coursera}{}{}
 \subsection{Certifications}
-\cventry{2016}{ITIL® Intermediate certificate in IT Service Transition}{BCS Professional Certification}{}{}{}
-\cventry{2016}{ITIL® Intermediate certificate in IT Service Operation}{BCS Professional Certification}{}{}{}
+\cventry{2021}{Cisco Certified DevNet Associate}{Cisco}{}{}{}
+\cventry{2019}{ITIL® 4 Foundation Certificate in IT Service Management}{AXELOS Global Best Practice}{}{}{}
+\cventry{2019}{Mental Health First Aid}{Mental Health First Aid (MHFA) England}{}{}{}
+%\cventry{2016}{ITIL® Intermediate certificate in IT Service Transition}{BCS Professional Certification}{}{}{}
+%\cventry{2016}{ITIL® Intermediate certificate in IT Service Operation}{BCS Professional Certification}{}{}{}
 \cventry{2015}{Emergency First Aid at Work and Automated External Defibrillation}{Cisco}{}{}{}
 %\cventry{2014}{Cisco Sales Expert}{Cisco}{}{}{}
 %\cventry{2013}{ITIL® Foundation Certificate in IT Service Management}{BCS Professional Certification}{}{}{}
@@ -142,19 +163,16 @@ Being familiar with the customer network, organization and support history, acte
 \cventry{2017}{AWS Technical Essentials}{Amazon Web Services}{}{}{}
 \subsection{Degrees}
 \cventry{2008}{M.Sc.\ in Telematics}{University of Twente}{Enschede, the Netherlands}{}{Thesis in ``Dynamic Service Composition in an Innovative Communication Environment''.\newline{}
-``Bonsai'' Study Tour to Japan in February 2008, topic ``Smart Surroundings''.}
-\cventry{2008}{Degree in Telecommunications Engineering}{Universidad Carlos III de Madrid}{Madrid, Spain}{}{Majored in ``Planning and
-Management of Telecommunications'', including management courses not specific to telecommunications, such as business administration, human resources, quality management, and innovation.
-\newline{}Socrates/Erasmus student exchange program at the University of Twente from September 2003 to March 2004.}
-\subsection{Master thesis}
-\cvitem{title}{\emph{Dynamic Service Composition in an Innovative Communication Environment'' (EU FP6 SPICE)}}
-\cvitem{supervisors}{L.~Ferreira Pires, M.~van Sinderen, E.M.~Gon\c{c}alves da Silva}
+  ``Bonsai'' Study Tour to Japan in February 2008, topic ``Smart Surroundings''.}
+\cventry{2008}{Master of Telecommunications Engineering}{Universidad Carlos III de Madrid}{Madrid, Spain}{}{Socrates/Erasmus student exchange program at the University of Twente from September 2003 to March 2004.}
+%\subsection{Master thesis}
+%\cvitem{title}{\emph{Dynamic Service Composition in an Innovative Communication Environment'' (EU FP6 SPICE)}}
+%\cvitem{supervisors}{L.~Ferreira Pires, M.~van Sinderen, E.M.~Gon\c{c}alves da Silva}
 %\cvitem{description}{Dynamic Service Composition enables the creation and delivery of new customised and attentive services to the end-user upon a service request, at run-time. These new services are made by composing already existing ones.}
-
 
 \section{Languages}
 \cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{Full professional proficiency}{}
+\cvitemwithcomment{English}{Bilingual proficiency}{}
 \cvitemwithcomment{Dutch}{Professional working proficiency}{}
 
 %\section{Computer skills}
@@ -163,10 +181,10 @@ Management of Telecommunications'', including management courses not specific to
 %\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 
 \section{Interests}
-\cvitem{Basketball}{Played at university and at a regional league in the Netherlands.}
-\cvitem{Free software}{Linux hobbyist, I contribute by reporting bugs, participating in mailing lists, etc.}
-\cvitem{Travelling}{Visited many countries, mostly within Europe.}
-\cvitem{Photography}{Taking photos of London (and other places) whenever I have the chance.}
+%\cvitem{Basketball}{Played at university and at a regional league in the Netherlands.}
+\cvitem{Cycling}{Cycling to work and leisure road cycling.}
+%\cvitem{Free software}{Linux hobbyist, I contribute by reporting bugs, participating in mailing lists, etc.}
+\cvitem{Photography}{Capturing memories of London and travel destinations to express my creativity.}
 
 %\section{Awards}
 %\cvlistitem{Cisco's ``Pinnacle Award'' runner-up (FY2014)}
@@ -175,7 +193,7 @@ Management of Telecommunications'', including management courses not specific to
 %\cvlistitem{Erasmus Student Network Alumnus (Honorary life-time membership) for my contribution during a period of three years in two local sections. Participated and sometimes organized national and international events (workshops, meetings\ldots). Served as Vice-National Representative for Spain for a year.}
 
 \section{Additional information}
-\cvlistitem{Latest version of this résumé available at \url{https://github.com/jorgeml/resume/raw/master/resume.pdf}.}
+\cvitem{}{Latest version of this résumé available at \url{https://github.com/jorgeml/resume/raw/master/resume.pdf}.}
 
 %\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
 
