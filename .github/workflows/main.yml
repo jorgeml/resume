@@ -28,7 +28,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
-          latexmk_use_lualatex: true
+          latexmk_use_xelatex: true
           extra_fonts: |
             ./fonts/Merriweather_Sans/*.ttf
             ./fonts/Source_Code_Pro/*.ttf
